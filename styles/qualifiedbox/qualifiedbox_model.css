@@ -1,0 +1,59 @@
+/* <!-- 圣诞礼盒大盒子 container --> */
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+/* <!-- 圣诞礼盒大盒子 container --> */
+.container {
+    width: 100%;
+    height: 1000px;
+    background: yellowgreen;
+}
+
+/* <!-- 圣诞礼盒 导航栏 --> */
+.container .article {
+    width: 100%;
+    height: 32px;
+    background: tomato;
+}
+/* <!-- 面包屑 --> */
+.article .crumbs {
+    margin: auto 100px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.article .crumbs .curmbs_inline>li {
+    float: left;
+    margin: auto 3px;
+}
+/* <!-- 圣诞礼盒限定 数据显示页面大盒子 --> */
+.container .article_lists {
+    width: 100%;
+    height: 1000px;
+}
+/* <!-- 圣诞礼盒限定 数据显示页面 --> */
+.article_lists .lists_info_all{
+    margin: auto 100px;
+    background: darkcyan;
+}
+/* <!-- 树形菜单 --> */
+.lists_info_all .lists_left{
+    /* margin: auto 3px; */
+    width: 300px;
+    height: 800px;
+    float: left;
+    background: darkgreen;
+}
+
+/* <!-- 商品展示 --> */
+.lists_info_all .lists_right{
+    width: 1000px;
+    height: 800px;
+    float: right;
+    background: darksalmon;
+}
