@@ -1,5 +1,7 @@
-/* <!-- 圣诞礼盒大盒子 container --> */
-
+*{
+    margin: 0;
+    padding: 0;
+}
 ul, ol {
     list-style: none;
 }
@@ -12,7 +14,7 @@ a {
 
 .container {
     width: 100%;
-    height: 1000px;
+    height: 830px;
     background: yellowgreen;
 }
 
@@ -82,3 +84,38 @@ a {
 .lists_right .top_info .top_info_sorts{
     float: right;
 }
+.top_info_sorts #sorts_name{
+    width: 200px;
+    height: 40px;
+}
+
+.lists_right .goods_info{
+    width: 100%;
+    height: 740px;
+    background: palegoldenrod;
+}
+
+.goods_box .goods_show_lists img{
+    width: 290px;
+    height: 290px;
+}
+
+.goods_box .goods_show_lists{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.goods_box .goods_show_lists li{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.goods_box .goods_show_lists .price{
+    margin: auto 13px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
