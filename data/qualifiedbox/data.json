@@ -75,5 +75,16 @@
     "hot": 3,
     "sales_num":2,
     "img": "../../images/qualifiedbox/耀眼之星圣诞限定礼盒.jpg"
+  },
+  {
+    "id": 7,
+    "title": "115ml",
+    "price": 1680,
+    "time": "2020-12-20",
+    "href": "耀眼之星辰限定礼盒",
+    "href_info": "Absolue L’extrait Inconparable Elixir",
+    "hot": 3,
+    "sales_num":2,
+    "img": "../../images/qualifiedbox/耀眼之星圣诞限定礼盒.jpg"
   }
 ]
