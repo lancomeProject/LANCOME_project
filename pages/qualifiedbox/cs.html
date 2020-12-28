@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        ul{
+
+        ul {
             list-style: none;
         }
-        .lists{
+
+        .lists {
             display: flex;
-            /* flex-direction: row; */
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            
             width: 600px;
-            height: 600px;
+            height: 300px;
             margin: 100px auto;
             border: 6px solid pink;
-            align-items: center;
-            justify-content: space-around;
         }
-        .lists li{
-            /* flex-wrap: wrap; */
-            /* flex-grow: 2; */
-            width: 300px;
-            height:150px;
+        
+        .lists li {
+            flex: 0 0 22%;
+            align-self: center;
+            margin: 5px;
+
+
+            height: 150px;
             background: darkcyan;
             border: 3px solid black;
         }
     </style>
 </head>
+
 <body>
     <ul class="lists">
         <li>1</li>
@@ -44,6 +51,8 @@
         <li>3</li>
         <li>4</li>
         <li>5</li>
+        <li>5</li>
     </ul>
 </body>
+
 </html>

@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "title": "小黑瓶30ml+塑颜霜50ml+哑光#196",
+    "price": 1000,
+    "time": "2020-11-11",
+    "href": "圣诞限定巴黎心愿礼盒",
+    "href_info": "",
+    "hot": 100,
+    "sales_num":90,
+    "img": "../../images/qualifiedbox/红唇精妆圣诞限定套装.jpg"
+  },
+  {
+    "id": 2,
+    "title": "小黑瓶30ml+塑颜霜50ml+哑光#196",
+    "price": 940,
+    "time": "2020-10-10",
+    "href": "圣诞限定巴黎心愿礼盒",
+    "href_info": "",
+    "hot": 80,
+    "sales_num":120,
+    "img": "../../images/qualifiedbox/红唇精妆圣诞限定套装.jpg"
+  },
+  {
+    "id": 3,
+    "title": "小黑瓶30ml+塑颜霜50ml+哑光#196",
+    "price": 40,
+    "time": "2020-12-12",
+    "href": "圣诞限定巴黎心愿礼盒",
+    "href_info": "",
+    "hot": 0,
+    "sales_num":60,
+    "img": "../../images/qualifiedbox/红唇精妆圣诞限定套装.jpg"
+  },
+  {
+    "id": 4,
+    "title": "小黑瓶30ml+塑颜霜50ml+哑光#196",
+    "price": 190,
+    "time": "2020-12-22",
+    "href": "圣诞限定巴黎心愿礼盒",
+    "href_info": "",
+    "hot": 10,
+    "sales_num":100,
+    "img": "../../images/qualifiedbox/红唇精妆圣诞限定套装.jpg"
+  },
+  {
+    "id": 5,
+    "title": "小黑瓶30ml+塑颜霜50ml+哑光#196",
+    "price": 140,
+    "time": "2020-12-18",
+    "href": "圣诞限定巴黎心愿礼盒",
+    "href_info": "",
+    "hot": 20,
+    "sales_num":130,
+    "img": "../../images/qualifiedbox/红唇精妆圣诞限定套装.jpg"
+  },
+  {
+    "id": 6,
+    "title": "小黑瓶30ml+塑颜霜50ml+哑光#196",
+    "price": 10,
+    "time": "2020-10-12",
+    "href": "圣诞限定巴黎心愿礼盒",
+    "href_info": "",
+    "hot": 330,
+    "sales_num":890,
+    "img": "../../images/qualifiedbox/红唇精妆圣诞限定套装.jpg"
+  },
+  {
+    "id": 7,
+    "title": "小黑瓶30ml+塑颜霜50ml+哑光#196",
+    "price": 340,
+    "time": "2020-09-12",
+    "href": "圣诞限定巴黎心愿礼盒",
+    "href_info": "",
+    "hot": 9,
+    "sales_num":80,
+    "img": "../../images/qualifiedbox/红唇精妆圣诞限定套装.jpg"
+  },
+  {
+    "id": 8,
+    "title": "小黑瓶30ml+塑颜霜50ml+哑光#196",
+    "price": 345,
+    "time": "2020-12-30",
+    "href": "圣诞限定巴黎心愿礼盒",
+    "href_info": "",
+    "hot": 2,
+    "sales_num":550,
+    "img": "../../images/qualifiedbox/红唇精妆圣诞限定套装.jpg"
+  }
+]
