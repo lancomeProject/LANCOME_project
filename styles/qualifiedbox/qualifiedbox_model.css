@@ -23,7 +23,7 @@ a {
 
 .container .article {
     height: 32px;
-    background: tomato;
+    /* background: tomato; */
 }
 
 /* <!-- 面包屑 --> */
@@ -52,7 +52,7 @@ a {
 .article_lists .lists_info_all {
     width: 1400px;
     margin: auto 60px;
-    background: darkcyan;
+    /* background: darkcyan; */
 }
 
 /* <!-- 树形菜单 --> */
@@ -70,14 +70,14 @@ a {
     width: 1100px;
     height: 800px;
     float: right;
-    background: darksalmon;
+    /* background: darksalmon; */
 }
 
 .lists_right .top_info {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    background: pink;
+    /* background: pink; */
 }
 
 .lists_right .top_info .top_info_goods {
@@ -95,21 +95,11 @@ a {
 
 .lists_right .goods_info {
     height: 740px;
-    background: palegoldenrod;
+    /* background: palegoldenrod; */
 }
 
-/* 
-.goods_box .goods_show_lists {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-} */
-
 .goods_box .goods_show_lists li {
-    height: 400px;
+    height: 520px;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -123,17 +113,35 @@ a {
     height: 320px;
 }
 
-/* 
-.goods_box .goods_show_lists img:hover {
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-} */
+/* 商品信息 三个p标签 */
+
+.goods_box .goods_show_lists .info {
+    width: 320px;
+    height: 120px;
+}
+
+.goods_box .goods_show_lists .info p {
+    font-size: 18px;
+    margin: 10px auto;
+}
+
+.goods_box .goods_show_lists .info p:nth-child(2) a {
+    color: #000;
+}
+
+.goods_box .goods_show_lists .info p:nth-child(3) {
+    color: #999;
+}
+
+/* 商品价格信息 */
 
 .goods_box .goods_show_lists .price {
-    margin: auto 13px;
+    margin: 10px 13px;
     display: flex;
     justify-content: space-around;
 }
+
+/* 遮罩层样式 */
 
 .goods_box .goods_show_lists .btn_box {
     /* display: none; */
@@ -159,10 +167,12 @@ a {
     color: #fff;
     background: #000;
 }
+
 .goods_show_lists .btn_box a:nth-child(1):hover {
     color: #fff;
     background: #d61b52;
 }
+
 .goods_show_lists .btn_box a:nth-child(2) {
     color: #000;
     background: #fff;
