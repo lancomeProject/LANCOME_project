@@ -9,6 +9,11 @@
 </head>
 
 <body>
+    <!-- 头部 -->
+    <div class="header">
+        <img src="../../images/qualifiedbox/logo.png" alt="">
+    </div>
+    
     <!-- 圣诞礼盒大盒子 container -->
     <div class="container">
         <!-- 圣诞礼盒 导航栏 -->
@@ -28,10 +33,17 @@
             <div class="lists_info_all">
                 <!-- 树形菜单 -->
                 <div class="lists_left">
+                    <div class="clear_box_all">
+                        <h3>产品筛选</h3>
+                        <div class="btn_clear_box">
+                            清除全部
+                            <i>X</i>
+                        </div>
+                    </div>
                     <p>秋冬必备</p>
                     <div class="filter1">
                         <div class="filter_name">产品筛选</div>
-                        <div class="name_add">+</div>
+                        <div class="name_add">-</div>
                     </div>
                     <div class="product">
                         <ul>
@@ -40,7 +52,10 @@
                     </div>
                     <div class="filter2">
                         <div class="filter_price">价格</div>
-                        <div class="price_add">+</div>
+                        <div class="price_add">-</div>
+                    </div>
+                    <div class="price_content">
+
                     </div>
                 </div>
                 <!-- 商品展示 -->
@@ -77,4 +92,5 @@
 
 </html>
 <script src="../../scripts/components/jquery.min.js"></script>
+<script src="../../scripts/qualifiedbox/goods_utils.js"></script>
 <script src="../../scripts/qualifiedbox/qualifiedbox_model.js"></script>

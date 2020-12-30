@@ -31,8 +31,8 @@ body {
 @goods_cart_box: .goods_cart_box;
 // 左侧购物车
 @box_left: .box_left;
-@total_num:.total_num;
-@tips:.tips;
+@total_num: .total_num;
+@tips: .tips;
 
 // 右侧购物车
 @box_right: .box_right;
@@ -43,14 +43,18 @@ body {
 
 // 头部信息
 @{header} {
+    position: relative;
+    background: black;
     width: 100%;
     height: 100px;
 }
 
 @{header} img {
-    width: 100%;
-    height: 100px;
-    background-size: cover;
+    position: absolute;
+    width: 153px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 // swiper插件
@@ -124,23 +128,25 @@ body {
             width: 1000px;
             background: tan;
 
-            @{total_num}{
+            @{total_num} {
                 // width: 900px;
                 line-height: 40px;
                 border-bottom: 3px solid black;
             }
 
-            @{tips}{
+            @{tips} {
                 margin-top: -12px;
             }
-            table{
+
+            table {
                 width: 100%;
-                
-                th{
+
+                th {
                     background: gray;
                     text-align: center;
                 }
-                td{
+
+                td {
                     text-align: center;
 
                 }

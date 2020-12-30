@@ -42,6 +42,30 @@
                 "id": "yanshuang",
                 "name": "product",
                 "label": "眼霜"
+            },
+            {
+                "num": "8",
+                "id": "mianshuang",
+                "name": "product",
+                "label": "面霜"
+            },
+            {
+                "num": "9",
+                "id": "xiangshui",
+                "name": "product",
+                "label": "香水"
+            },
+            {
+                "num": "10",
+                "id": "yanbu",
+                "name": "product",
+                "label": "眼部"
+            },
+            {
+                "num": "11",
+                "id": "fangshai",
+                "name": "product",
+                "label": "防晒"
             }
         ],
         "goods": [

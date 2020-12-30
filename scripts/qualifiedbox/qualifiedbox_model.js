@@ -4,23 +4,26 @@
     let buy_now_url = "../../pages/qualifiedbox/buy_now_model.html";
     let learn_more_url = "../../pages/qualifiedbox/learn_more_model.html";
 
-    $.ajax({
-        url: "../../data/qualifiedbox/allData.json",
-        async: true,
-        type: "get",
-        success: (data) => {
-            // 绑定数据，渲染页面
-            bindHTML(data[0].goods);
-            // 产品筛选
-            productHTML(data[0].product);
-        }
-    });
+    let loadData = () => {
+        $.ajax({
+            url: "../../data/qualifiedbox/allData.json",
+            async: true,
+            type: "get",
+            success: (data) => {
+                // 绑定数据，渲染页面
+                bindHTML(data[0].goods);
+                // 产品筛选
+                productHTML(data[0].product);
+            }
+        });
+    }
+    loadData();
 
     // 产品筛选数据渲染
     let productHTML = (product) => {
         let proHTML = "";
         $.each(product, (index, item) => {
-            proHTML +=`<li>
+            proHTML += `<li>
                             <input type="checkbox" name="${item.name}" id="${item.id}" />
                             <label for="${item.name}">${item.label}</label>
                         </li>`;
@@ -28,13 +31,51 @@
         $(".product ul").html(proHTML);
     }
 
-    $(".filter1").on("click",()=>{
-        $(".product").css({"display":"none"});
-        $(".name_add").html("-");
+    // 当产品筛选有被选中时，上面的产品筛选隐藏
+    $(".product").on("click", "input", function () {
+        let inpLen = $('input[name="product"]:checked').length;
+        if (inpLen > 0) {
+            $(".clear_box_all").css({
+                "display": "block"
+            });
+        } else {
+            $(".clear_box_all").css({
+                "display": "none"
+            });
+        }
     });
-    
-    $(".filter2").on("click",()=>{
-        $(".price_add").html("-");
+
+    // 关闭选中的筛选条件，并刷新页面
+    $(".clear_box_all").on("click", function () {
+        window.location.reload();
+    });
+
+    $(".filter1").on("click", () => {
+        if ($(".name_add").html() == "-") {
+            $(".product").css({
+                "display": "none"
+            });
+            $(".name_add").html("+");
+        } else {
+            $(".product").css({
+                "display": "block"
+            });
+            $(".name_add").html("-");
+        }
+    });
+
+    $(".filter2").on("click", () => {
+        if ($(".price_add").html() == "-") {
+            $(".price_content").css({
+                "display": "none"
+            });
+            $(".price_add").html("+");
+        } else {
+            $(".price_content").css({
+                "display": "block"
+            });
+            $(".price_add").html("-");
+        }
     });
 
     // 绑定数据，渲染页面
@@ -42,8 +83,6 @@
         $(".top_info_goods_num").html(data.length);
         let strHTML = "";
         $.each(data, (index, item) => {
-            // 动态获取 星星
-            // let start = publicStart(item.start);
             //                  上市时间           人气                 价格            销售
             strHTML += `<li time="${item.time}" hot="${item.hot}" price_height="${item.price}" 
                                 price_low="${item.price}" sales_num="${item.sales_num}" id="${item.id}">
@@ -63,13 +102,11 @@
                                 <a href="${learn_more_url}" target="_blank" class="learn_more">了解详情</a>
                             </div>
                             </li>`;
-
-
         });
         $(".goods_show_lists").html(strHTML);
 
-        // 获取随机数，绑定 爆款人气等信息
-        allData(unique());
+        // 获取随机数，绑定 爆款人气等信息  参数是li 的个数
+        allData(goods_utils.unique($(".goods_show_lists li").length));
     }
 
     // 获取随机数，绑定 爆款人气等信息
@@ -115,13 +152,8 @@
     });
 
     // 鼠标移上 显示遮罩层，并显示立即购买和 了解详情
-    // $(".goods_show_lists").on('mouseenter', 'li img', function (e) { })
     $(".goods_show_lists").on('mouseover', 'li img', function (e) {
-        // 给img 添加类名
-        // debugger;
-        // $(this).addClass('');
-        // 获取最后一个兄弟元素
-        // $(this).siblings().last();
+        // 获取最后一个兄弟元素并添加样式
         $(this).siblings().last().css({
             'display': 'block',
             'position': 'absolute',
@@ -136,33 +168,12 @@
 
     // 鼠标移出 
     $(".goods_show_lists").on('mouseleave', 'li .btn_box', function (e) {
-        // 移除 img 的类名
-        // $(this).siblings().first().removeClass('lists_img');
         // 遮罩层隐藏
         $(this).css({
             "display": "none"
         });
     })
 
-
-    // 获取不重复的随机数
-    let unique = () => {
-        let newArr = [];
-        for (let j = 0; j < 3; j++) {
-            // 获取li 的长度
-            let $lis_len = $(".goods_show_lists li").length;
-            // 随机生成随机数
-            let index = Math.round(Math.random() * $lis_len);
-            newArr.push(index);
-        }
-
-        // var newArr2 = [];
-        // for (let i = 0; i < newArr.length; i++) {
-        //     if (newArr2.indexOf(newArr[i]) == -1) {
-        //         newArr2.push(newArr[i]);
-        //     }
-        // }
-        return newArr;
-    }
+   
 
 })()
