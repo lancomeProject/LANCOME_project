@@ -61,7 +61,34 @@ a {
     width: 300px;
     height: 800px;
     float: left;
-    background: darkgreen;
+}
+
+.lists_info_all .lists_left p {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 40px 0;
+}
+
+.lists_info_all .lists_left .filter1,.filter2 {
+    display: flex;
+    padding: 30px 0;
+    font-size: 16px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.lists_info_all .lists_left .product{
+    font-size: 16px;
+    color: gray;
+}
+
+.lists_info_all .lists_left .product li{
+    margin: 10px 0;
+}
+
+.lists_info_all .lists_left .product input{
+    width: 16px;
+    height: 16px;
 }
 
 /* <!-- 商品展示 --> */

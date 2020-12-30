@@ -5,13 +5,36 @@
     let learn_more_url = "../../pages/qualifiedbox/learn_more_model.html";
 
     $.ajax({
-        url: "../../data/qualifiedbox/dataCopy.json",
+        url: "../../data/qualifiedbox/allData.json",
         async: true,
         type: "get",
         success: (data) => {
             // 绑定数据，渲染页面
-            bindHTML(data);
+            bindHTML(data[0].goods);
+            // 产品筛选
+            productHTML(data[0].product);
         }
+    });
+
+    // 产品筛选数据渲染
+    let productHTML = (product) => {
+        let proHTML = "";
+        $.each(product, (index, item) => {
+            proHTML +=`<li>
+                            <input type="checkbox" name="${item.name}" id="${item.id}" />
+                            <label for="${item.name}">${item.label}</label>
+                        </li>`;
+        });
+        $(".product ul").html(proHTML);
+    }
+
+    $(".filter1").on("click",()=>{
+        $(".product").css({"display":"none"});
+        $(".name_add").html("-");
+    });
+    
+    $(".filter2").on("click",()=>{
+        $(".price_add").html("-");
     });
 
     // 绑定数据，渲染页面
@@ -49,13 +72,12 @@
         allData(unique());
     }
 
-
     // 获取随机数，绑定 爆款人气等信息
     let allData = (data) => {
         let $lis = $(".goods_show_lists li");
         $.each($lis, (index, item) => {
             if (data.includes(parseInt(item.id))) {
-                console.log(item.id);
+                // console.log(item.id);
                 let that = item;
                 let res = $(that).children()[3];
                 $(res).before("<div class='tag_hot' style='displack:block;width:50px;height:25px;line-height:25px;background:#000;position:absolute;top:0;right:0;color:white;'><span>人气</span></div>")
@@ -117,7 +139,9 @@
         // 移除 img 的类名
         // $(this).siblings().first().removeClass('lists_img');
         // 遮罩层隐藏
-        $(this).css({ "display": "none" });
+        $(this).css({
+            "display": "none"
+        });
     })
 
 
@@ -132,13 +156,13 @@
             newArr.push(index);
         }
 
-        var newArr2 = [];
-        for (let i = 0; i < newArr.length; i++) {
-            if (newArr2.indexOf(newArr[i]) == -1) {
-                newArr2.push(newArr[i]);
-            }
-        }
-        return newArr2;
+        // var newArr2 = [];
+        // for (let i = 0; i < newArr.length; i++) {
+        //     if (newArr2.indexOf(newArr[i]) == -1) {
+        //         newArr2.push(newArr[i]);
+        //     }
+        // }
+        return newArr;
     }
 
 })()
