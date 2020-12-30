@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul,ol {
+    list-style: none;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
+}
+/* h公用样式 */
+.fs20 {
+    font-size: 20px;
+}
