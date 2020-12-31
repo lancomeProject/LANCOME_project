@@ -33,6 +33,12 @@ body {
 @box_left: .box_left;
 @total_num: .total_num;
 @tips: .tips;
+@total_order_price: .total_order_price;
+@order_price_label: .order_price_label;
+@order_price_box: .order_price_box;
+@total_price: .total_price;
+
+@immediately_go: .immediately_go;
 
 // 右侧购物车
 @box_right: .box_right;
@@ -126,7 +132,7 @@ body {
 
         @{box_left} {
             width: 1000px;
-            background: tan;
+            background: peachpuff;
 
             @{total_num} {
                 // width: 900px;
@@ -136,11 +142,12 @@ body {
 
             @{tips} {
                 margin-top: -12px;
+                display: none;
             }
 
             table {
                 width: 100%;
-                // border-collapse: collapse;
+
                 th {
                     background: gray;
                     text-align: center;
@@ -148,15 +155,93 @@ body {
 
                 td {
                     text-align: center;
-                    img{
+
+                    img {
                         width: 179px;
                         height: 179px;
                     }
+
                     input {
                         margin: 0 -6px;
                         width: 30px;
                         text-align: center;
                     }
+                }
+            }
+
+            @{total_order_price} {
+                height: 150px;
+                margin-top: 50px;
+                border-bottom: 3px solid gray;
+
+                @{order_price_label} {
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 66px;
+                    margin-left: 10px;
+                }
+
+                @{order_price_box} {
+                    width: 600px;
+                    height: 100%;
+                    float: right;
+
+                    p {
+
+                        margin-left: 300px;
+
+                        span {
+                            float: right;
+                            margin: 0 10px 0 100px;
+                        }
+                    }
+                }
+            }
+
+            @{total_price} {
+                font-size: 19px;
+                margin-left: 700px;
+
+                span {
+                    float: right;
+                    margin: 0 10px 0 100px;
+                }
+            }
+
+            @{immediately_go} {
+                // width: 400px;
+                // height: 100px;
+                float: right;
+
+                a {
+                    width: 160px;
+                    height: 42px;
+                    line-height: 42px;
+                    text-align: center;
+                    float: right;
+                    border: 1px solid #000;
+                }
+
+                a:first-child {
+                    margin: 0 10px 0 20px;
+                    color: #fff;
+                    background: #000;
+                }
+                
+                a:first-child:hover {
+                    margin: 0 10px 0 20px;
+                    color: #fff;
+                    border: 1px solid #d61b52;
+                    background: #d61b52;
+                }
+
+                a:last-child:hover {
+                    border: 1px solid #999;
+                }
+
+                a:last-child {
+                    color: #000;
+                    background: #fff;
                 }
             }
         }

@@ -21,9 +21,15 @@
             $("input[name='single_select']").prop({
                 checked: true
             });
+            $(".tips").css({
+                "display": "block"
+            });
         } else {
             $("input[name='single_select']").prop({
                 checked: false
+            });
+            $(".tips").css({
+                "display": "none"
             });
         }
         statisticNum();
@@ -31,9 +37,15 @@
 
     // 单选
     $("input[name='single_select']").on("click", function () {
-        // console.log("单选");
-        if ($(this).prop("checked")) {
-            statisticNum();
+        statisticNum();
+        if (!$(this).prop("checked")) {
+            $(".tips").css({
+                "display": "none"
+            });
+        } else {
+            $(".tips").css({
+                "display": "block"
+            });
         }
     });
 
@@ -66,15 +78,22 @@
 
     // 只有商品被选中的时候，商品数量开始总计
     let statisticNum = () => {
-        let num = 0;
+        let goods_num = 0;
+        let goods_price = 0;
         $("input[name='single_select']").each(function () {
             if ($(this).prop("checked")) {
                 let $goods_num = $(this).parent("td").siblings().eq(3).children().find("input").val();
-                num += parseFloat($goods_num);
+                goods_num += parseFloat($goods_num);
+
+                let $goods_price = $(this).parent("td").siblings().eq(4).html();
+                let goodsPriceNum = parseFloat($goods_price.slice(2, $goods_price.length));
+                goods_price += goodsPriceNum;
             }
         });
-        
-        $(".total_num span").html(num);
+
+        $(".total_num span").html(goods_num);
+        $(".order_price_goods_price").html("￥ " + goods_price);
+        $(".total_price_goods_price").html("￥ " + goods_price);
     }
     statisticNum();
 

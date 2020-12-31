@@ -69,7 +69,7 @@
                         <td>
                             <div>
                                 <button class="sub_num">-</button>
-                                <input type="text" name="goods_num" id="goods_num1" value="1">
+                                <input type="text" name="goods_num" readonly value="1">
                                 <!-- 最多只能买 8 个 -->
                                 <button class="add_num">+</button>
                             </div>
@@ -91,7 +91,7 @@
                         <td>
                             <div>
                                 <button class="sub_num">-</button>
-                                <input type="text" name="goods_num" id="goods_num2" value="1">
+                                <input type="text" name="goods_num" readonly value="1">
                                 <!-- 最多只能买 8 个 -->
                                 <button class="add_num">+</button>
                             </div>
@@ -99,6 +99,30 @@
                         <td>¥ 190</td>
                     </tr>
                 </table>
+                <div class="total_order_price">
+                    <span class="order_price_label">订单总价</span>
+                    <div class="order_price_box">
+                        <p>商品价格
+                            <span class="order_price_goods_price">￥ 0</span>
+                        </p>
+                        <p>优惠金额
+                            <span>￥ 0</span>
+                        </p>
+                        <p>运费
+                            <span>￥ 0</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="total_price">
+                    <p>
+                        总价
+                        <span class="total_price_goods_price">￥ 0</span>
+                    </p>
+                </div>
+                <div class="immediately_go">
+                    <a>立即计算</a>
+                    <a>继续购物</a>
+                </div>
             </div>
 
             <div class="box_right">
