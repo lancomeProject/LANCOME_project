@@ -11,6 +11,21 @@ a {
     text-decoration: none;
 }
 
+.header {
+    position: relative;
+    background: black;
+    width: 100%;
+    height: 100px;
+}
+
+.header img {
+    position: absolute;
+    width: 153px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* <!-- 圣诞礼盒大盒子 container --> */
 
 .container {
@@ -23,7 +38,7 @@ a {
 
 .container .article {
     height: 32px;
-    background: tomato;
+    /* background: tomato; */
 }
 
 /* <!-- 面包屑 --> */
@@ -52,7 +67,7 @@ a {
 .article_lists .lists_info_all {
     width: 1400px;
     margin: auto 60px;
-    background: darkcyan;
+    /* background: darkcyan; */
 }
 
 /* <!-- 树形菜单 --> */
@@ -61,7 +76,98 @@ a {
     width: 300px;
     height: 800px;
     float: left;
-    background: darkgreen;
+}
+
+.lists_info_all .lists_left .clear_box_all {
+    display: none;
+    margin-top: 10px;
+    width: 260px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.lists_info_all .lists_left .clear_box_all h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.lists_info_all .lists_left .clear_box_all .btn_clear_box {
+    margin-top: 10px;
+    font-size: 14px;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lists_info_all .lists_left p {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+.lists_info_all .lists_left .filter1, .filter2 {
+    display: flex;
+    padding: 10px 0;
+    font-size: 16px;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 260px;
+}
+.filter2{
+    margin-top: 20px;
+}
+.lists_info_all .lists_left .product {
+    width: 260px;
+    height: 300px;
+    overflow: auto;
+    font-size: 16px;
+    color: gray;
+}
+
+/* 
+::-webkit-scrollbar 滚动条整体部分，可以设置宽度啥的
+::-webkit-scrollbar-button 滚动条两端的按钮
+::-webkit-scrollbar-track  外层轨道
+::-webkit-scrollbar-track-piece  内层滚动槽
+::-webkit-scrollbar-thumb 滚动的滑块
+::-webkit-scrollbar-corner 边角
+::-webkit-resizer 定义右下角拖动块的样式 */
+
+.lists_info_all .lists_left .product::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* <!--修改 滚动条的 下面 的 样式--> */
+
+.lists_info_all .lists_left .product::-webkit-scrollbar-track {
+    background-color: #eee;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+/* <!--修改 滑块 --> */
+
+.lists_info_all .lists_left .product::-webkit-scrollbar-thumb {
+    background-color: #191919;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    border-radius: 2em;
+}
+
+.lists_info_all .lists_left .product li {
+    margin: 10px 0;
+}
+
+.lists_info_all .lists_left .product input {
+    width: 16px;
+    height: 16px;
+}
+
+.lists_info_all .lists_left .price_content {
+    width: 260px;
+    height: 100px;
+    background: yellowgreen;
 }
 
 /* <!-- 商品展示 --> */
@@ -70,14 +176,14 @@ a {
     width: 1100px;
     height: 800px;
     float: right;
-    background: darksalmon;
+    /* background: darksalmon; */
 }
 
 .lists_right .top_info {
     height: 60px;
     line-height: 60px;
     text-align: center;
-    background: pink;
+    /* background: pink; */
 }
 
 .lists_right .top_info .top_info_goods {
@@ -95,21 +201,11 @@ a {
 
 .lists_right .goods_info {
     height: 740px;
-    background: palegoldenrod;
+    /* background: palegoldenrod; */
 }
 
-/* 
-.goods_box .goods_show_lists {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: wrap;
-} */
-
 .goods_box .goods_show_lists li {
-    height: 400px;
+    height: 520px;
     text-align: center;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -123,17 +219,35 @@ a {
     height: 320px;
 }
 
-/* 
-.goods_box .goods_show_lists img:hover {
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-} */
+/* 商品信息 三个p标签 */
+
+.goods_box .goods_show_lists .info {
+    width: 320px;
+    height: 120px;
+}
+
+.goods_box .goods_show_lists .info p {
+    font-size: 18px;
+    margin: 10px auto;
+}
+
+.goods_box .goods_show_lists .info p:nth-child(2) a {
+    color: #000;
+}
+
+.goods_box .goods_show_lists .info p:nth-child(3) {
+    color: #999;
+}
+
+/* 商品价格信息 */
 
 .goods_box .goods_show_lists .price {
-    margin: auto 13px;
+    margin: 10px 13px;
     display: flex;
     justify-content: space-around;
 }
+
+/* 遮罩层样式 */
 
 .goods_box .goods_show_lists .btn_box {
     /* display: none; */
@@ -159,10 +273,12 @@ a {
     color: #fff;
     background: #000;
 }
+
 .goods_show_lists .btn_box a:nth-child(1):hover {
     color: #fff;
     background: #d61b52;
 }
+
 .goods_show_lists .btn_box a:nth-child(2) {
     color: #000;
     background: #fff;

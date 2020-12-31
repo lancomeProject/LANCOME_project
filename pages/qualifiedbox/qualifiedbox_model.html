@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>圣诞礼盒限定</title>
     <link rel="stylesheet" href="../../styles/qualifiedbox/qualifiedbox_model.css">
 </head>
+
 <body>
+    <!-- 头部 -->
+    <div class="header">
+        <img src="../../images/qualifiedbox/logo.png" alt="">
+    </div>
+    
     <!-- 圣诞礼盒大盒子 container -->
     <div class="container">
         <!-- 圣诞礼盒 导航栏 -->
@@ -26,18 +33,37 @@
             <div class="lists_info_all">
                 <!-- 树形菜单 -->
                 <div class="lists_left">
+                    <div class="clear_box_all">
+                        <h3>产品筛选</h3>
+                        <div class="btn_clear_box">
+                            清除全部
+                            <i>X</i>
+                        </div>
+                    </div>
+                    <p>秋冬必备</p>
+                    <div class="filter1">
+                        <div class="filter_name">产品筛选</div>
+                        <div class="name_add">-</div>
+                    </div>
+                    <div class="product">
+                        <ul>
 
+                        </ul>
+                    </div>
+                    <div class="filter2">
+                        <div class="filter_price">价格</div>
+                        <div class="price_add">-</div>
+                    </div>
+                    <div class="price_content">
 
-                    <!-- 圣诞限定礼盒 及 树形菜单 -->
-
-
+                    </div>
                 </div>
                 <!-- 商品展示 -->
                 <div class="lists_right">
                     <!-- 商品件数 及 下拉选择排序 -->
                     <div class="top_info">
                         <span class="top_info_goods">
-                            <i class="top_info_goods_num">2</i>
+                            <i class="top_info_goods_num"></i>
                             <span>件商品</span>
                         </span>
                         <span class="top_info_sorts">
@@ -54,21 +80,7 @@
                     <div class="goods_info">
                         <div class="goods_box">
                             <ul class="goods_show_lists">
-                                <!-- <li>
-                                    <img src="../../images/qualifiedbox/圣诞心愿巴黎礼盒.jpg" alt="">
-                                    <p>400ml</p>
-                                    <p>明星大粉水</p>
-                                    <p>Tonique Confort</p>
-                                    <div class="price">
-                                        <h3>★★★★★</h3>
-                                        <span>|</span>
-                                        <h3>￥435</h3>
-                                    </div>
-                                    <div class="btn_box">
-                                        <a href="" class="buy_now">立即购买</a>
-                                        <a href="" class="learn_more">了解详情</a>
-                                    </div>
-                                </li> -->
+
                             </ul>
                         </div>
                     </div>
@@ -77,6 +89,8 @@
         </div>
     </div>
 </body>
+
 </html>
 <script src="../../scripts/components/jquery.min.js"></script>
+<script src="../../scripts/qualifiedbox/goods_utils.js"></script>
 <script src="../../scripts/qualifiedbox/qualifiedbox_model.js"></script>

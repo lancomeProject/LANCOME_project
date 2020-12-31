@@ -1,0 +1,161 @@
+html,
+body {
+    position: relative;
+}
+
+body {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    // width: 1519px;
+    width: 100%;
+}
+
+// 声明 名称 变量
+
+// 头部
+@header: .header;
+
+// 文字轮播
+@swiper-container: .swiper-container;
+@swiper-slide: .swiper-slide;
+@close_swiper: .close_swiper;
+
+// 购物及付款
+@section_buy: .section_buy;
+// 导航条
+@article_body: .article_body;
+@progress_bar: .progress_bar;
+
+// 购物车盒子
+@goods_cart_box: .goods_cart_box;
+// 左侧购物车
+@box_left: .box_left;
+@total_num: .total_num;
+@tips: .tips;
+
+// 右侧购物车
+@box_right: .box_right;
+
+
+// 声明 样式 变量
+
+
+// 头部信息
+@{header} {
+    position: relative;
+    background: black;
+    width: 100%;
+    height: 100px;
+}
+
+@{header} img {
+    position: absolute;
+    width: 153px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// swiper插件
+@{swiper-container} {
+    width: 100%;
+    height: 30px;
+}
+
+@{swiper-slide} {
+    text-align: center;
+    font-size: 14px;
+    background: #eee;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+// 点击 X 隐藏轮播
+@{close_swiper} {
+    position: absolute;
+    top: 100px;
+    right: 24px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    // background: royalblue;
+    z-index: 6;
+    cursor: pointer;
+}
+
+// 购物付款
+@{section_buy} {
+    // width: 1500px;
+    height: 800px;
+    margin-top: -35px;
+
+    @{article_body} {
+        margin: 0 100px;
+        height: 50px;
+        line-height: 50px;
+
+        @{progress_bar} {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            border-bottom: 1px solid black;
+
+            li {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    @{goods_cart_box} {
+        margin: 65px 100px;
+        height: 800px;
+        display: flex;
+
+        @{box_left} {
+            width: 1000px;
+            background: tan;
+
+            @{total_num} {
+                // width: 900px;
+                line-height: 40px;
+                border-bottom: 3px solid black;
+            }
+
+            @{tips} {
+                margin-top: -12px;
+            }
+
+            table {
+                width: 100%;
+
+                th {
+                    background: gray;
+                    text-align: center;
+                }
+
+                td {
+                    text-align: center;
+
+                }
+            }
+        }
+
+        @{box_right} {
+            width: 320px;
+            background: yellowgreen;
+        }
+    }
+}
