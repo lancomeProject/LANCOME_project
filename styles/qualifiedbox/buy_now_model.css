@@ -98,6 +98,15 @@ body {
 .section_buy .goods_cart_box .box_left table td {
   text-align: center;
 }
+.section_buy .goods_cart_box .box_left table td img {
+  width: 179px;
+  height: 179px;
+}
+.section_buy .goods_cart_box .box_left table td input {
+  margin: 0 -6px;
+  width: 30px;
+  text-align: center;
+}
 .section_buy .goods_cart_box .box_right {
   width: 320px;
   background: yellowgreen;

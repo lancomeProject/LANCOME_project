@@ -44,8 +44,8 @@
             <div class="box_left">
                 <h3 class="total_num">您共选购了<span>5</span>件商品</h3>
                 <p class="tips">恭喜您获得<b>免邮资格</b>！（付邮试用活动除外）</p>
-                <table>
-                    <tr>
+                <table border="1" cellspacing="0" cellpadding="0">
+                    <tr class="tab_header">
                         <th><input type="checkbox" name="reading"></th>
                         <th>全选</th>
                         <th>商品信息</th>
@@ -53,19 +53,50 @@
                         <th>数量</th>
                         <th>小计</th>
                     </tr>
-                    <tr>
+                    <tr class="tab_lists">
                         <td><input type="checkbox" name="reading"></td>
-                        <td><img src="../../images/qualifiedbox/圣诞心愿巴黎礼盒.jpg" style="width: 179px;height: 179px;" alt=""></td>
+                        <td><img src="../../images/qualifiedbox/圣诞心愿巴黎礼盒.jpg" alt=""></td>
                         <td>
-                            <p>明星大粉水</p>
-                            <select name="" id="">
-                                <option value="">400ml</option>
-                                <option value="">200ml</option>
-                            </select>
+                            <div>
+                                <p>明星大粉水</p>
+                                <select name="" id="">
+                                    <option value="">400ml</option>
+                                    <option value="">200ml</option>
+                                </select>
+                            </div>
                         </td>
                         <td>¥ 435</td>
-                        <td>111111111</td>
+                        <td>
+                            <div>
+                                <button class="sub_num">-</button>
+                                <input type="text" name="goods_num" id="goods_num1" value="1">
+                                <!-- 最多只能买 8 个 -->
+                                <button class="add_num">+</button>
+                            </div>
+                        </td>
                         <td>¥ 435</td>
+                    </tr>
+                    <tr class="tab_lists">
+                        <td><input type="checkbox" name="reading"></td>
+                        <td><img src="../../images/qualifiedbox/塑颜紧致套装.jpg" alt=""></td>
+                        <td>
+                            <div>
+                                <p>圣诞限定巴黎心愿礼盒</p>
+                                <select name="" id="">
+                                    <option value="">20ml</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>¥ 190</td>
+                        <td>
+                            <div>
+                                <button class="sub_num">-</button>
+                                <input type="text" name="goods_num" id="goods_num2" value="1">
+                                <!-- 最多只能买 8 个 -->
+                                <button class="add_num">+</button>
+                            </div>
+                        </td>
+                        <td>¥ 190</td>
                     </tr>
                 </table>
             </div>
