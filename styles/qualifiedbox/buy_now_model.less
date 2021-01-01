@@ -36,15 +36,27 @@ body {
 @total_order_price: .total_order_price;
 @order_price_label: .order_price_label;
 @order_price_box: .order_price_box;
+
+@loyal_fans: .loyal_fans;
+@public_box: .public_box;
+@mumber_box: .mumber_box;
+@give_box: .give_box;
+@courtesy_box: .courtesy_box;
+@welfare_box: .welfare_box;
+
 @total_price: .total_price;
 
 @immediately_go: .immediately_go;
+@recommend_goods: .recommend_goods;
 
 // 右侧购物车
 @box_right: .box_right;
 
 
 // 声明 样式 变量
+
+
+// 去掉边框  border:0;   outline:none;
 
 
 // 头部信息
@@ -73,7 +85,6 @@ body {
     text-align: center;
     font-size: 14px;
     background: #eee;
-    /* Center slide text vertically */
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -135,7 +146,6 @@ body {
             background: peachpuff;
 
             @{total_num} {
-                // width: 900px;
                 line-height: 40px;
                 border-bottom: 3px solid black;
             }
@@ -198,6 +208,39 @@ body {
                 }
             }
 
+            @{loyal_fans} {
+                margin-top: 50px;
+                border-bottom: 1px solid #e8e8e8;
+                background: #f7f7f7;
+
+                @{public_box} {
+                    height: 300px;
+                    background: rgba(245, 234, 234, 0.5);
+                    border-bottom: 5px solid #e8e8e8;
+
+                    h3 {
+                        margin: 10px 20px;
+                        padding: 10px 0 0 0;
+                    }
+
+                }
+
+                @{welfare_box} {
+                    border-bottom: 0px solid #e8e8e8;
+                    height: 100px;
+                    margin: 10px 0 20px 0;
+                    display: flex;
+                    align-items: center;
+
+                    input {
+                        margin-top: 10px;
+                        outline: none;
+                        width: 290px;
+                        height: 36px;
+                    }
+                }
+            }
+
             @{total_price} {
                 font-size: 19px;
                 margin-left: 700px;
@@ -209,11 +252,9 @@ body {
             }
 
             @{immediately_go} {
-                // width: 400px;
-                // height: 100px;
                 float: right;
-
                 a {
+                    cursor: pointer;
                     width: 160px;
                     height: 42px;
                     line-height: 42px;
@@ -227,7 +268,7 @@ body {
                     color: #fff;
                     background: #000;
                 }
-                
+
                 a:first-child:hover {
                     margin: 0 10px 0 20px;
                     color: #fff;
@@ -244,11 +285,18 @@ body {
                     background: #fff;
                 }
             }
-        }
 
-        @{box_right} {
-            width: 320px;
-            background: yellowgreen;
+            @{recommend_goods} {
+                height: 550px;
+                margin-top: 100px;
+                background: palegreen;
+                border-top: 1px solid #e8e8e8;
+            }
         }
+    }
+
+    @{box_right} {
+        width: 320px;
+        background: yellowgreen;
     }
 }
