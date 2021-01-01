@@ -126,14 +126,15 @@
         $(".total_num span").html(goods_num);
         $(".order_price_goods_price").html("￥ " + goods_price);
         $(".total_price_goods_price").html("￥ " + goods_price);
+        $(".goods_cart_total").html("￥ " + goods_price);
+        $(".goods_cart_actual_total").html("￥ " + goods_price);
     }
     statisticNum();
 
 
     $('#navList li').click(function () {
-        // this // 也是原生的元素
-        let index = $(this).index(); // 获取当前元素对应的索引  0
-        $(this).addClass('active').siblings().removeClass('active').parent().siblings().eq($(this).index()).addClass('active').siblings('div').removeClass('active')
+        // let index = $(this).index(); // 获取当前元素对应的索引  0
+        $(this).addClass('active').siblings().removeClass('active').parent().siblings().eq($(this).index()).addClass('active').siblings('div').removeClass('active');
         //  // 把当前点击的li元素加上active类名，然后在获取当前点击的元素的所有的兄弟姐妹元素，给其他清空active类名
     })
 

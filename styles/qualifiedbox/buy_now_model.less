@@ -56,6 +56,9 @@ body {
 
 // 右侧购物车
 @box_right: .box_right;
+@order_cart_all: .order_cart_all;
+@help_box: .help_box;
+@service_box: .service_box;
 
 
 // 声明 样式 变量
@@ -73,9 +76,9 @@ body {
 }
 
 @{header} img {
-    // position: absolute;
+    position: absolute;
     width: 153px;
-    top: 50%;
+    top: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -326,7 +329,6 @@ body {
             @{recommend_goods} {
                 height: 550px;
                 margin-top: 100px;
-                // background: palegreen;
                 border-top: 3px solid #e8e8e8;
 
                 * {
@@ -372,6 +374,38 @@ body {
 
     @{box_right} {
         width: 320px;
-        background: yellowgreen;
+        // background: yellowgreen;
+
+        @{order_cart_all} {
+            padding: 0 25px;
+            text-align: center;
+            border: 1px solid #000;
+            a{
+                width: 100%;
+                height: 38px;
+                color: #fff;
+                background: #d61b52;
+            }
+            .cart_price {
+                p {
+                    text-align: left;
+                    margin-left: 20px;
+
+                    span {
+                        float: right;
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+
+        @{help_box} {
+            height: 400px;
+        }
+
+        @{service_box} {
+            height: 400px;
+        }
+
     }
 }
