@@ -1,18 +1,50 @@
 (function () {
     // swiper初始化
-    var swiper = new Swiper('.swiper-container', {
+    var swiper = new Swiper('.text_banner', {
         loop: true,
         autoplay: true
     });
 
     // 点击 X 隐藏轮播
     $('.close_swiper').click(() => {
-        $('.swiper-container').css({
+        $('.text_banner').css({
             display: 'none'
         });
         $('.close_swiper').css({
             display: 'none'
         });
+    });
+
+
+    var swiper = new Swiper('.number_banner', {
+        // 设置slider容器能够同时显示的slides数量
+        slidesPerView: 4,
+        // 在slide之间设置距离（单位px）
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    var swiper = new Swiper('.give_banner', {
+        // 设置slider容器能够同时显示的slides数量
+        slidesPerView: 4,
+        // 在slide之间设置距离（单位px）
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+    var swiper = new Swiper('.courtesy_banner', {
+        // 设置slider容器能够同时显示的slides数量
+        slidesPerView: 4,
+        // 在slide之间设置距离（单位px）
+        spaceBetween: 10,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
     });
 
     // 全选
@@ -97,5 +129,12 @@
     }
     statisticNum();
 
+
+    $('#navList li').click(function () {
+        // this // 也是原生的元素
+        let index = $(this).index(); // 获取当前元素对应的索引  0
+        $(this).addClass('active').siblings().removeClass('active').parent().siblings().eq($(this).index()).addClass('active').siblings('div').removeClass('active')
+        //  // 把当前点击的li元素加上active类名，然后在获取当前点击的元素的所有的兄弟姐妹元素，给其他清空active类名
+    })
 
 })()
