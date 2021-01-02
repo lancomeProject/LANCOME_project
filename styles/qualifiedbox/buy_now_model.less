@@ -11,6 +11,7 @@ body {
     width: 100%;
 }
 
+
 // 声明 名称 变量
 
 // 头部
@@ -150,7 +151,6 @@ body {
 
         @{box_left} {
             width: 1000px;
-            background: peachpuff;
 
             @{total_num} {
                 line-height: 40px;
@@ -162,16 +162,36 @@ body {
                 display: none;
             }
 
+
+
             table {
                 width: 100%;
 
+                input,
+                button {
+                    // border: 0;
+                    outline: none;
+                    // background: #fff;
+                }
+
                 th {
-                    background: gray;
+                    background: #eee;
+                    height: 50px;
                     text-align: center;
+                }
+
+                th:nth-child(2) {
+                    width: 250px;
+                }
+
+                th:nth-child(6) {
+                    width: 100px;
                 }
 
                 td {
                     text-align: center;
+                    border-bottom: 2px solid #e8e8e8;
+                    padding: 20px 0;
 
                     img {
                         width: 179px;
@@ -374,18 +394,30 @@ body {
 
     @{box_right} {
         width: 320px;
-        // background: yellowgreen;
+        margin-left: 40px;
+
+        h5 {
+            font-size: 22px;
+        }
 
         @{order_cart_all} {
+            height: 280px;
             padding: 0 25px;
             text-align: center;
             border: 1px solid #000;
-            a{
-                width: 100%;
+
+            a {
+                display: block;
+                width: 200px;
                 height: 38px;
+                line-height: 38px;
+                text-align: center;
+                margin-left: 30px;
+                cursor: pointer;
                 color: #fff;
                 background: #d61b52;
             }
+
             .cart_price {
                 p {
                     text-align: left;
@@ -400,11 +432,63 @@ body {
         }
 
         @{help_box} {
-            height: 400px;
+
+            .cont_box .cont_time {
+                border-bottom: 1px solid #e7e7e7;
+            }
+
+            .cont_box .cont_time>p {
+                font-size: 18px;
+                display: inline-block;
+            }
+
+            .cont_box .cont_time_small {
+                margin-left: 36px;
+
+                .contentText {
+                    font-size: 14px;
+                    color: #949494;
+
+                    a {
+                        color: #000;
+                    }
+                }
+
+                .phone {
+                    font-size: 22px;
+                }
+            }
+
+            h5 {
+                padding-bottom: 20px;
+                border-bottom: 2px solid #e7e7e7;
+                font-size: 22px;
+                font-weight: 500;
+            }
         }
 
         @{service_box} {
             height: 400px;
+
+            .info_box p:first-child {
+                font-size: 18px;
+            }
+
+            .info_box p:last-child {
+                font-size: 14px;
+            }
+
+            .service_time {
+                margin-bottom: 60px;
+                border-bottom: 1px solid #e7e7e7;
+            }
+
+            h5 {
+                padding-bottom: 20px;
+                border-bottom: 2px solid #e7e7e7;
+                font-size: 22px;
+                font-weight: 500;
+            }
         }
 
     }

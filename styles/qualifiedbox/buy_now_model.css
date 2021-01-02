@@ -77,7 +77,6 @@ body {
 }
 .section_buy .goods_cart_box .box_left {
   width: 1000px;
-  background: peachpuff;
 }
 .section_buy .goods_cart_box .box_left .total_num {
   line-height: 40px;
@@ -90,12 +89,25 @@ body {
 .section_buy .goods_cart_box .box_left table {
   width: 100%;
 }
+.section_buy .goods_cart_box .box_left table input,
+.section_buy .goods_cart_box .box_left table button {
+  outline: none;
+}
 .section_buy .goods_cart_box .box_left table th {
-  background: gray;
+  background: #eee;
+  height: 50px;
   text-align: center;
+}
+.section_buy .goods_cart_box .box_left table th:nth-child(2) {
+  width: 250px;
+}
+.section_buy .goods_cart_box .box_left table th:nth-child(6) {
+  width: 100px;
 }
 .section_buy .goods_cart_box .box_left table td {
   text-align: center;
+  border-bottom: 2px solid #e8e8e8;
+  padding: 20px 0;
 }
 .section_buy .goods_cart_box .box_left table td img {
   width: 179px;
@@ -259,15 +271,25 @@ body {
 }
 .section_buy .box_right {
   width: 320px;
+  margin-left: 40px;
+}
+.section_buy .box_right h5 {
+  font-size: 22px;
 }
 .section_buy .box_right .order_cart_all {
+  height: 280px;
   padding: 0 25px;
   text-align: center;
   border: 1px solid #000;
 }
 .section_buy .box_right .order_cart_all a {
-  width: 100%;
+  display: block;
+  width: 200px;
   height: 38px;
+  line-height: 38px;
+  text-align: center;
+  margin-left: 30px;
+  cursor: pointer;
   color: #fff;
   background: #d61b52;
 }
@@ -279,9 +301,48 @@ body {
   float: right;
   margin-right: 20px;
 }
-.section_buy .box_right .help_box {
-  height: 400px;
+.section_buy .box_right .help_box .cont_box .cont_time {
+  border-bottom: 1px solid #e7e7e7;
+}
+.section_buy .box_right .help_box .cont_box .cont_time > p {
+  font-size: 18px;
+  display: inline-block;
+}
+.section_buy .box_right .help_box .cont_box .cont_time_small {
+  margin-left: 36px;
+}
+.section_buy .box_right .help_box .cont_box .cont_time_small .contentText {
+  font-size: 14px;
+  color: #949494;
+}
+.section_buy .box_right .help_box .cont_box .cont_time_small .contentText a {
+  color: #000;
+}
+.section_buy .box_right .help_box .cont_box .cont_time_small .phone {
+  font-size: 22px;
+}
+.section_buy .box_right .help_box h5 {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e7e7e7;
+  font-size: 22px;
+  font-weight: 500;
 }
 .section_buy .box_right .service_box {
   height: 400px;
+}
+.section_buy .box_right .service_box .info_box p:first-child {
+  font-size: 18px;
+}
+.section_buy .box_right .service_box .info_box p:last-child {
+  font-size: 14px;
+}
+.section_buy .box_right .service_box .service_time {
+  margin-bottom: 60px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.section_buy .box_right .service_box h5 {
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e7e7e7;
+  font-size: 22px;
+  font-weight: 500;
 }

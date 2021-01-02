@@ -70,15 +70,15 @@
     // 单选
     $("input[name='single_select']").on("click", function () {
         statisticNum();
-        if (!$(this).prop("checked")) {
-            $(".tips").css({
-                "display": "none"
-            });
-        } else {
-            $(".tips").css({
-                "display": "block"
-            });
-        }
+        // if (!$(this).prop("checked")) {
+        //     $(".tips").css({
+        //         "display": "none"
+        //     });
+        // } else {
+        //     $(".tips").css({
+        //         "display": "block"
+        //     });
+        // }
     });
 
     // 点击加减按钮进行商品加减
@@ -91,6 +91,7 @@
         let $unitPrice = $(this).parent().parent().prev().html();
         // 商品单价处理 ￥ 435 只取数字
         let unitPriceNum = parseFloat($unitPrice.slice(2, $unitPrice.length));
+
         // 0为减号  2为加号
         if (index == 0) {
             $goods_num--;
@@ -103,7 +104,7 @@
         }
         // 给 商品小计 赋值
         if ($goods_num > 0 && $goods_num < 9) {
-            $(this).parent().parent().next().html($goods_num * unitPriceNum);
+            $(this).parent().parent().next().html("￥ " + $goods_num * unitPriceNum);
         }
         statisticNum();
     });
@@ -112,6 +113,7 @@
     let statisticNum = () => {
         let goods_num = 0;
         let goods_price = 0;
+
         $("input[name='single_select']").each(function () {
             if ($(this).prop("checked")) {
                 let $goods_num = $(this).parent("td").siblings().eq(3).children().find("input").val();
@@ -122,6 +124,22 @@
                 goods_price += goodsPriceNum;
             }
         });
+
+        // if (goods_price === 0) {
+        //     $('.immediately_go a:first-child').css({
+        //         "pointer-events": "none"
+        //     });
+        //     $('.order_cart_all a').css({
+        //         "pointer-events": "none"
+        //     });
+        // } else {
+        //     $('.immediately_go a:first-child').css({
+        //         "pointer-events": "auto"
+        //     });
+        //     $('.order_cart_all a').css({
+        //         "pointer-events": "auto"
+        //     });
+        // }
 
         $(".total_num span").html(goods_num);
         $(".order_price_goods_price").html("￥ " + goods_price);
@@ -137,5 +155,6 @@
         $(this).addClass('active').siblings().removeClass('active').parent().siblings().eq($(this).index()).addClass('active').siblings('div').removeClass('active');
         //  // 把当前点击的li元素加上active类名，然后在获取当前点击的元素的所有的兄弟姐妹元素，给其他清空active类名
     })
+
 
 })()
