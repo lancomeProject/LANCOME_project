@@ -1,0 +1,117 @@
+[
+    {
+        "goods_info": [
+            {
+                "id": 1,
+                "img": "../../images/qualifiedbox/圣诞心愿巴黎礼盒.jpg",
+                "info": "明星大粉水",
+                "options1": "400ml",
+                "options2": "200ml",
+                "price": "¥ 435",
+                "subtotal": "¥ 435"
+            },
+            {
+                "id": 2,
+                "img": "../../images/qualifiedbox/塑颜紧致套装.jpg",
+                "info": "圣诞限定巴黎心愿礼盒",
+                "options1": "20ml",
+                "price": "¥ 190",
+                "subtotal": "¥ 190"
+            },
+            {
+                "id": 3,
+                "img": "../../images/qualifiedbox/小黑瓶.jpg",
+                "info": "小黑瓶国风玫瑰限定版",
+                "options1": "限定版30ml",
+                "options2": "限定版100ml",
+                "price": "¥ 760",
+                "subtotal": "¥ 760"
+            }
+        ],
+        "text_banner": [
+            {
+                "id": 1,
+                "title": "会员兑礼|低至500积分兑明星美礼"
+            },
+            {
+                "id": 2,
+                "title": "秋冬必囤|新客首单购正装享小黑瓶5ml"
+            },
+            {
+                "id": 3,
+                "title": "秋冬必囤限时加赠|全场任购正装享体验礼"
+            },
+            {
+                "id": 4,
+                "title": "会员兑礼|低至500积分兑明星美礼"
+            },
+            {
+                "id": 5,
+                "title": "秋冬必囤|新客首单购正装享小黑瓶5ml"
+            }
+        ],
+        "number_banner": [
+            {
+                "id": 1,
+                "img": "https://res.lancome.com.cn/resources/2020/11/13/1605257031235133_258X258.jpg",
+                "info": "大眼精华 5ml",
+                "integral": "500积分"
+            },
+            {
+                "id": 2,
+                "img": "https://res.lancome.com.cn/resources/2020/10/20/16031643171033210_258X258.jpg",
+                "info": "发光眼霜 7ml",
+                "integral": "500积分"
+            },
+            {
+                "id": 3,
+                "img": "https://res.lancome.com.cn/resources/2020/10/20/16031643393132815_258X258.jpg",
+                "info": "小黑瓶 7ml",
+                "integral": "500积分"
+            }
+        ],
+        "give_banner": [
+            {
+                "id": 1,
+                "img": "https://res.lancome.com.cn/resources/2020/12/31/16093867311411572_258X258.jpg"
+            }
+        ],
+        "courtesy_banner": [
+            {
+                "id": 1,
+                "info": "满680元加赠",
+                "img": "https://res.lancome.com.cn/resources/2020/12/31/16094141437634130.jpg"
+            },
+            {
+                "id": 2,
+                "info": "买即赠",
+                "img": "https://res.lancome.com.cn/resources/2020/12/31/16094139939295710.jpg"
+            },
+            {
+                "id": 3,
+                "info": "满1080元加赠",
+                "img": "https://res.lancome.com.cn/resources/2020/12/31/16094142496408835.jpg"
+            }
+        ],
+        "service_cont": [
+            {
+                "id": 1,
+                "img": "https://res.lancome.com.cn/build/images/shoppingcart/footer-1@2x.png",
+                "title": "官方网站正品保证",
+                "info": "我们承诺您在兰蔻官网购买的商品，全部为兰蔻原装正品，您可以放心购买。"
+            },
+            {
+                "id": 2,
+                "img": "https://res.lancome.com.cn/build/images/shoppingcart/footer-2@2x.png",
+                "title": "顺丰包邮",
+                "info": "港澳台偏远地区除外，亦可提供普通快递服务。"
+            },
+            {
+                "id": 3,
+                "img": "https://res.lancome.com.cn/build/images/shoppingcart/footer-3@2x.png",
+                "title": "精美礼盒",
+                "info": "甄选精美礼盒包装，尊享官网购物体验"
+            }
+        ]
+    }
+]
