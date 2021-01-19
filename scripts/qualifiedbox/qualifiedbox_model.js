@@ -1,12 +1,11 @@
 (function () {
-
     // 声明变量
     let buy_now_url = "../../pages/qualifiedbox/buy_now_model.html";
     let learn_more_url = "../../pages/qualifiedbox/learn_more_model.html";
 
     let loadData = () => {
         $.ajax({
-            url: "../../data/qualifiedbox/allData.json",
+            url: "../../data/qualifiedbox/qualifiedbox_data.json",
             async: true,
             type: "get",
             success: (data) => {
@@ -50,32 +49,24 @@
         window.location.reload();
     });
 
-    $(".filter1").on("click", () => {
-        if ($(".name_add").html() == "-") {
-            $(".product").css({
-                "display": "none"
-            });
-            $(".name_add").html("+");
-        } else {
-            $(".product").css({
-                "display": "block"
-            });
-            $(".name_add").html("-");
-        }
+    $(".filter1").on("click", function () {
+        $(this).next().slideToggle('slow', () => {
+            if ($(".name_add").html() == '-') {
+                $(".name_add").html("+");
+            } else {
+                $(".name_add").html("-");
+            }
+        });
     });
 
-    $(".filter2").on("click", () => {
-        if ($(".price_add").html() == "-") {
-            $(".price_content").css({
-                "display": "none"
-            });
-            $(".price_add").html("+");
-        } else {
-            $(".price_content").css({
-                "display": "block"
-            });
-            $(".price_add").html("-");
-        }
+    $(".filter2").on("click", function () {
+        $(this).next().slideToggle('fast', () => {
+            if ($(".price_add").html() == '-') {
+                $(".price_add").html("+");
+            } else {
+                $(".price_add").html("-");
+            }
+        });
     });
 
     // 绑定数据，渲染页面
@@ -98,7 +89,7 @@
                                 <h3>${item.price}</h3>
                             </div>
                             <div class="btn_box">
-                                <a href="${buy_now_url}" target="_blank" class="buy_now">立即购买</a>
+                                <a href="${buy_now_url}?${item.goods_info}" target="_blank" class="buy_now">立即购买</a>
                                 <a href="${learn_more_url}" target="_blank" class="learn_more">了解详情</a>
                             </div>
                             </li>`;
@@ -114,7 +105,6 @@
         let $lis = $(".goods_show_lists li");
         $.each($lis, (index, item) => {
             if (data.includes(parseInt(item.id))) {
-                // console.log(item.id);
                 let that = item;
                 let res = $(that).children()[3];
                 $(res).before("<div class='tag_hot' style='displack:block;width:50px;height:25px;line-height:25px;background:#000;position:absolute;top:0;right:0;color:white;'><span>人气</span></div>")
@@ -174,6 +164,6 @@
         });
     })
 
-   
+
 
 })()

@@ -2,7 +2,6 @@ let goods_utils = (function () {
 
     // 获取随机数
     let unique = (parameter) => {
-        console.log(parameter);
         let newArr = [];
         // 获取li 的长度
         let randomNum = Math.floor(parameter / 3);
